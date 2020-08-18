@@ -32,8 +32,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenZeroFeetAndZeroFeet_IfEqual_ThenShouldReturnTrue()
         {
-            double feetValueOne = this.quantityMeasurement.ReturnFeet(0.0);
-            double feetValueTwo = this.quantityMeasurement.ReturnFeet(0.0);
+            double feetValueOne = this.quantityMeasurement.ReturnFeetValue(0.0);
+            double feetValueTwo = this.quantityMeasurement.ReturnFeetValue(0.0);
             Assert.AreEqual(feetValueOne, feetValueTwo);
         }
 
@@ -43,8 +43,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenDifferentFeetValues_IfNotEqual_ThenShouldReturnTrue()
         {
-            double feetValueOne = this.quantityMeasurement.ReturnFeet(0.0);
-            double feetValueTwo = this.quantityMeasurement.ReturnFeet(1.0);
+            double feetValueOne = this.quantityMeasurement.ReturnFeetValue(0.0);
+            double feetValueTwo = this.quantityMeasurement.ReturnFeetValue(1.0);
             Assert.AreNotEqual(feetValueOne, feetValueTwo);
         }
 
@@ -56,6 +56,16 @@ namespace QuantityMeasurementTest
         {
             bool equals = this.quantityMeasurement.Equals(null);
             Assert.IsFalse(equals);
+        }
+
+        /// <summary>
+        /// Test case to check reference.
+        /// </summary>
+        [Test]
+        public void GivenReferenceForFeet_IfEqual_ShouldReturnTrue()
+        {
+            bool equals = this.quantityMeasurement.Equals(this.quantityMeasurement);
+            Assert.IsTrue(equals);
         }
     }
 }

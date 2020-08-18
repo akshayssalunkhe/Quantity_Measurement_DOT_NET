@@ -12,9 +12,9 @@ namespace QuantityMeasurementProblem
         /// <summary>
         /// Method to return feet.
         /// </summary>
-        /// <param name="feet"></param>
+        /// <param name="feetValue"></param>
         /// <returns>Feet value.</returns>
-        public double ReturnFeet(double feet) => feet;
+        public double ReturnFeetValue(double feetValue) => feetValue;
 
         /// <summary>
         /// Overridding Equals Method.
@@ -26,6 +26,11 @@ namespace QuantityMeasurementProblem
             if (obj == null)
             {
                 return false;
+            }
+
+            if (obj == this)
+            {
+                return true;
             }
 
             return true;
