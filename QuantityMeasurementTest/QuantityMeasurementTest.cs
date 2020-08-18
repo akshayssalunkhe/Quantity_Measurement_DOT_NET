@@ -1,7 +1,6 @@
 // <copyright file="QuantityMeasurementTest.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
-
 namespace QuantityMeasurementTest
 {
     using NUnit.Framework;
@@ -66,6 +65,17 @@ namespace QuantityMeasurementTest
         {
             bool equals = this.quantityMeasurement.Equals(this.quantityMeasurement);
             Assert.IsTrue(equals);
+        }
+
+        /// <summary>
+        /// Test case to check type.
+        /// </summary>
+        [Test]
+        public void GivenTypeOfQuantity_IfEqual_ThenshouldReturnTrue()
+        {
+            QuantityMeasurement firstQuantity = new QuantityMeasurement();
+            QuantityMeasurement secondQuantity = new QuantityMeasurement();
+            Assert.AreEqual(firstQuantity, secondQuantity);
         }
     }
 }
