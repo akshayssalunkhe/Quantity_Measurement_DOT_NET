@@ -200,5 +200,17 @@ namespace QuantityMeasurementTest
             double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.INCH_TO_CENTIMETER);
             Assert.AreNotEqual(1.0, actualCentimeterValue);
         }
+
+        /// <summary>
+        /// Test method to check two inch plus two inch equal to four inch.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchLength_WhenAdd_ThenReturnResult()
+        {
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
+            Assert.AreEqual(4.0, addition);
+        }
     }
 }

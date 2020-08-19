@@ -53,5 +53,16 @@ namespace QuantityMeasurementProblem
         {
             return base.GetHashCode();
         }
+
+        /// <summary>
+        /// Function to add two unit values.
+        /// </summary>
+        /// <param name="firstValue"></param>
+        /// <param name="secondValue"></param>
+        /// <returns> Addition of two values </returns>
+        public double GetAddition(double firstValue, double secondValue)
+        {
+            return firstValue + secondValue;
+        }
     }
 }

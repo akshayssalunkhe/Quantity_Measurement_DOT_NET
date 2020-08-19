@@ -43,6 +43,16 @@
             /// Enum for inch to centimeter conversion.
             /// </summary>
                 INCH_TO_CENTIMETER,
+
+            /// <summary>
+            /// Enum for feet unit type.
+            /// </summary>
+                FEET,
+
+            /// <summary>
+            /// Enum for inch unit type.
+            /// </summary>
+                INCH,
         }
 
             /// <summary>
@@ -61,6 +71,8 @@
                     LengthUnit.YARD_TO_INCH => 1 * 36.0,
                     LengthUnit.YARD_TO_FEET => 1 * 3.0,
                     LengthUnit.INCH_TO_CENTIMETER => 1 * 2.5,
+                    LengthUnit.FEET => 1.0,
+                    LengthUnit.INCH => 1.0,
                     _ => 0.0,
                 };
             }
