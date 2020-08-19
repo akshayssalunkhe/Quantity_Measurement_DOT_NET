@@ -180,5 +180,25 @@ namespace QuantityMeasurementTest
             double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.YARD_TO_FEET);
             Assert.AreEqual(3.0, actualYardValue);
         }
+
+        /// <summary>
+        /// Test method to check two inch is equal to five centimeter.
+        /// </summary>
+        [Test]
+        public void GivenInchValueToConvertToCentimeter_ThenShouldReturnEqual()
+        {
+            double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH_TO_CENTIMETER);
+            Assert.AreEqual(5.0, actualCentimeterValue);
+        }
+
+        /// <summary>
+        /// Test method to check one inch is not equal to one centimeter.
+        /// </summary>
+        [Test]
+        public void GivenInchValueToConvertToCentimeter_ThenShouldReturnNotEqual()
+        {
+            double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.INCH_TO_CENTIMETER);
+            Assert.AreNotEqual(1.0, actualCentimeterValue);
+        }
     }
 }
