@@ -222,5 +222,15 @@ namespace QuantityMeasurementTest
             double actualVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.GALLON_TO_LITRES);
             Assert.AreEqual(3.78, actualVolume);
         }
+
+        /// <summary>
+        /// Test method to check one litre equals to thousand millilitre.
+        /// </summary>
+        [Test]
+        public void GivenOneLitreVolumeConvertToMilliLitre_ShouldReturnEqual()
+        {
+            double actualVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.LITRE_TO_MILLILITRE);
+            Assert.AreEqual(1000.0, actualVolume);
+        }
     }
 }

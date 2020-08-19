@@ -74,12 +74,17 @@ namespace QuantityMeasurementProblem
                /// <summary>
                /// Enum for litres.
                /// </summary>
-                LITRES,
+                LITRE,
 
                /// <summary>
                /// Enum for litres.
                /// </summary>
-                LITRES_TO_GALLON,
+                LITRE_TO_GALLON,
+
+               /// <summary>
+               /// Enum for litre to millilitre conversion.
+               /// </summary>
+                LITRE_TO_MILLILITRE,
         }
 
             /// <summary>
@@ -101,9 +106,10 @@ namespace QuantityMeasurementProblem
                     UnitType.FEET => 1.0,
                     UnitType.INCH => 1.0,
                     UnitType.GALLON => 1.0,
-                    UnitType.LITRES => 1.0,
+                    UnitType.LITRE => 1.0,
                     UnitType.GALLON_TO_LITRES => 1 * 3.78,
-                    UnitType.LITRES_TO_GALLON => 1 / 3.78,
+                    UnitType.LITRE_TO_GALLON => 1 / 3.78,
+                    UnitType.LITRE_TO_MILLILITRE => 1 * 1000.0,
                     _ => 0.0,
                 };
             }
