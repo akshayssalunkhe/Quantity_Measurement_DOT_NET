@@ -205,7 +205,7 @@ namespace QuantityMeasurementTest
         /// Test method to check two inch plus two inch equal to four inch.
         /// </summary>
         [Test]
-        public void GivenTwoInchLength_WhenAdd_ThenReturnResult()
+        public void GivenTwoInchLength_WhenAdd_ThenShouldReturnResult()
         {
             double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Unit.UnitType.INCH);
             double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Unit.UnitType.INCH);
@@ -217,7 +217,7 @@ namespace QuantityMeasurementTest
         /// Test method to check one gallon equals to three point seven eight litre.
         /// </summary>
         [Test]
-        public void GivenOneGallonVolumeConvertToLitres_ShouldReturnEquals()
+        public void GivenOneGallonVolumeConvertToLitres_ThenShouldReturnEquals()
         {
             double actualVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.GALLON_TO_LITRES);
             Assert.AreEqual(3.78, actualVolume);
@@ -227,10 +227,34 @@ namespace QuantityMeasurementTest
         /// Test method to check one litre equals to thousand millilitre.
         /// </summary>
         [Test]
-        public void GivenOneLitreVolumeConvertToMilliLitre_ShouldReturnEqual()
+        public void GivenOneLitreVolumeConvertToMilliLitre_ThenShouldReturnEqual()
         {
             double actualVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.LITRE_TO_MILLILITRE);
             Assert.AreEqual(1000.0, actualVolume);
+        }
+
+        /// <summary>
+        /// Test method to check addition of one gallon and three point seven eight litres equal to seven point five seven litres.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndOneLitreValue_WhenAdded_ThenShouldReturnResultInLitres()
+        {
+            double firstVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.GALLON_TO_LITRES);
+            double secondVolume = this.quantityMeasurement.GetConvertUnitValue(3.785, Unit.UnitType.LITRE);
+            double addition = this.quantityMeasurement.GetAddition(firstVolume, secondVolume);
+            Assert.AreEqual(7.57, addition, 0.1);
+        }
+
+        /// <summary>
+        /// Test method to check addition of one litre and thousand millilitres equal to two litres.
+        /// </summary>
+        [Test]
+        public void GivenOneLitreAndOneMillilitreValue_WhenAdded_ThenShouldReturnResultInLitres()
+        {
+            double firstVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.LITRE);
+            double secondVolume = this.quantityMeasurement.GetConvertUnitValue(1000.0, Unit.UnitType.MILLILITRE_TO_LITRE);
+            double addition = this.quantityMeasurement.GetAddition(firstVolume, secondVolume);
+            Assert.AreEqual(2.0, addition);
         }
     }
 }
