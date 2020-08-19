@@ -59,7 +59,7 @@ namespace QuantityMeasurementProblem
         /// </summary>
         /// <param name="firstValue"></param>
         /// <param name="secondValue"></param>
-        /// <returns> Addition of two values </returns>
+        /// <returns> Addition of two values. </returns>
         public double GetAddition(double firstValue, double secondValue)
         {
             return firstValue + secondValue;

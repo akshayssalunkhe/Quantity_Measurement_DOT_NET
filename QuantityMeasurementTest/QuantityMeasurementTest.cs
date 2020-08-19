@@ -132,7 +132,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test case to check feet to inch conversion
+        /// Test case to check feet to inch conversion.
         /// </summary>
         [Test]
         public void GivenFeetValueConvertToInch_ThenShouldReturnEqual()

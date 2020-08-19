@@ -1,8 +1,14 @@
-﻿namespace QuantityMeasurementProblem
+﻿/// <summary>
+/// Quantity measurement problem.
+/// </summary>
+namespace QuantityMeasurementProblem
     {
         using System;
         using System.Collections.Generic;
 
+        /// <summary>
+        /// length class.
+        /// </summary>
         public class Length
         {
             /// <summary>
@@ -29,36 +35,37 @@
                 /// Enum for inch to yard conversion.
                 ///  </summary>
                 INCH_TO_YARD,
+
                 /// <summary>
                 /// Enum for yard to inch conversion.
-            /// </summary>
+                /// </summary>
                 YARD_TO_INCH,
 
-            /// <summary>
-            /// Enum for yard to feet conversion.
-            /// </summary>
+                /// <summary>
+                /// Enum for yard to feet conversion.
+                /// </summary>
                 YARD_TO_FEET,
 
-            /// <summary>
-            /// Enum for inch to centimeter conversion.
-            /// </summary>
+                /// <summary>
+                /// Enum for inch to centimeter conversion.
+                /// </summary>
                 INCH_TO_CENTIMETER,
 
-            /// <summary>
-            /// Enum for feet unit type.
-            /// </summary>
+                /// <summary>
+                /// Enum for feet unit type.
+                /// </summary>
                 FEET,
 
-            /// <summary>
-            /// Enum for inch unit type.
-            /// </summary>
+                /// <summary>
+                /// Enum for inch unit type.
+                /// </summary>
                 INCH,
         }
 
             /// <summary>
             /// Function to get value of enum.
             /// </summary>
-            /// <param name="lengthUnit"></param>
+            /// <param name=lengthUnit></param>
             /// <returns></returns>
             public double GetValue(LengthUnit lengthUnit)
             {
