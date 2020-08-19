@@ -170,5 +170,15 @@ namespace QuantityMeasurementTest
             double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.YARD_TO_INCH);
             Assert.AreEqual(36.0, actualYardValue);
         }
+
+        /// <summary>
+        /// Test method to check one yard is equal to three feet.
+        /// </summary>
+        [Test]
+        public void GivenYardValueConvertToFeet_ThenShouldReturnEqual()
+        {
+            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.YARD_TO_FEET);
+            Assert.AreEqual(3.0, actualYardValue);
+        }
     }
 }
