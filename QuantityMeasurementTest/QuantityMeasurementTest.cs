@@ -31,8 +31,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenZeroFeetAndZeroFeet_IfEqual_ThenShouldReturnTrue()
         {
-            double feetValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET_TO_INCH);
-            double feetValueTwo = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET_TO_INCH);
+            double feetValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Unit.UnitType.FEET_TO_INCH);
+            double feetValueTwo = this.quantityMeasurement.GetConvertUnitValue(0.0, Unit.UnitType.FEET_TO_INCH);
             Assert.AreEqual(feetValueOne, feetValueTwo);
         }
 
@@ -42,8 +42,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenDifferentFeetValues_IfNotEqual_ThenShouldReturnTrue()
         {
-            double feetValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET_TO_INCH);
-            double feetValueTwo = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.FEET_TO_INCH);
+            double feetValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Unit.UnitType.FEET_TO_INCH);
+            double feetValueTwo = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.FEET_TO_INCH);
             Assert.AreNotEqual(feetValueOne, feetValueTwo);
         }
 
@@ -84,8 +84,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void Given0InchAnd0Inch_IfEqual_ThenShouldReturnTrue()
         {
-            double inchValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH_TO_FEET);
-            double inchValueTwo = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH_TO_FEET);
+            double inchValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Unit.UnitType.INCH_TO_FEET);
+            double inchValueTwo = this.quantityMeasurement.GetConvertUnitValue(0.0, Unit.UnitType.INCH_TO_FEET);
             Assert.AreEqual(inchValueOne, inchValueTwo);
         }
 
@@ -95,8 +95,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void Given0InchAnd1Inch_IfNotEqual_ThenShouldReturnTrue()
         {
-            double inchValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH_TO_FEET);
-            double inchValueTwo = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.INCH_TO_FEET);
+            double inchValueOne = this.quantityMeasurement.GetConvertUnitValue(0.0, Unit.UnitType.INCH_TO_FEET);
+            double inchValueTwo = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.INCH_TO_FEET);
             Assert.AreNotEqual(inchValueOne, inchValueTwo);
         }
 
@@ -137,7 +137,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenFeetValueConvertToInch_ThenShouldReturnEqual()
         {
-            double actualInchValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.FEET_TO_INCH);
+            double actualInchValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.FEET_TO_INCH);
             Assert.AreEqual(12.0, actualInchValue);
         }
 
@@ -147,7 +147,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenFeetValueConvertToYard_ThenShouldReturnEqual()
         {
-            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(3.0, Length.LengthUnit.FEET_TO_YARD);
+            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(3.0, Unit.UnitType.FEET_TO_YARD);
             Assert.AreEqual(1.0, actualYardValue);
         }
 
@@ -157,7 +157,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenInchValueConvertToYard_ThenShouldReturnNotEqual()
         {
-            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.INCH_TO_YARD);
+            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.INCH_TO_YARD);
             Assert.AreNotEqual(1.0, actualYardValue);
         }
 
@@ -167,7 +167,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenYardValueConvertToInch_ThenShouldReturnEqual()
         {
-            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.YARD_TO_INCH);
+            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.YARD_TO_INCH);
             Assert.AreEqual(36.0, actualYardValue);
         }
 
@@ -177,7 +177,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenYardValueConvertToFeet_ThenShouldReturnEqual()
         {
-            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.YARD_TO_FEET);
+            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.YARD_TO_FEET);
             Assert.AreEqual(3.0, actualYardValue);
         }
 
@@ -187,7 +187,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenInchValueToConvertToCentimeter_ThenShouldReturnEqual()
         {
-            double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH_TO_CENTIMETER);
+            double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Unit.UnitType.INCH_TO_CENTIMETER);
             Assert.AreEqual(5.0, actualCentimeterValue);
         }
 
@@ -197,7 +197,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenInchValueToConvertToCentimeter_ThenShouldReturnNotEqual()
         {
-            double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.INCH_TO_CENTIMETER);
+            double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.INCH_TO_CENTIMETER);
             Assert.AreNotEqual(1.0, actualCentimeterValue);
         }
 
@@ -207,10 +207,20 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoInchLength_WhenAdd_ThenReturnResult()
         {
-            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
-            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Unit.UnitType.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Unit.UnitType.INCH);
             double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
             Assert.AreEqual(4.0, addition);
+        }
+
+        /// <summary>
+        /// Test method to check one gallon equals to three point seven eight litre.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonVolumeConvertToLitres_ShouldReturnEquals()
+        {
+            double actualVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.GALLON_TO_LITRES);
+            Assert.AreEqual(3.78, actualVolume);
         }
     }
 }

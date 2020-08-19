@@ -7,14 +7,14 @@ namespace QuantityMeasurementProblem
         using System.Collections.Generic;
 
         /// <summary>
-        /// length class.
+        /// unit class.
         /// </summary>
-        public class Length
+        public class Unit
         {
             /// <summary>
-            /// Enum For length unit.
+            /// Enum For unit type.
             /// </summary>
-            public enum LengthUnit
+            public enum UnitType
             {
                 /// <summary>
                 /// Enum for feet to inch conversion.
@@ -60,26 +60,50 @@ namespace QuantityMeasurementProblem
                 /// Enum for inch unit type.
                 /// </summary>
                 INCH,
+
+                /// <summary>
+                /// Enum for gallon to litres.
+                /// </summary>
+                GALLON_TO_LITRES,
+
+                /// <summary>
+                /// Enum for gallon.
+                /// </summary>
+                GALLON,
+
+               /// <summary>
+               /// Enum for litres.
+               /// </summary>
+                LITRES,
+
+               /// <summary>
+               /// Enum for litres.
+               /// </summary>
+                LITRES_TO_GALLON,
         }
 
             /// <summary>
             /// Function to get value of enum.
             /// </summary>
-            /// <param name=lengthUnit></param>
-            /// <returns></returns>
-            public double GetValue(LengthUnit lengthUnit)
+            /// <param name=unitType></param>
+            /// <returns> selected unit conversion</returns>
+            public double GetValue(UnitType unitType)
             {
-                return lengthUnit switch
+                return unitType switch
                 {
-                    LengthUnit.FEET_TO_INCH => 1 * 12.0,
-                    LengthUnit.INCH_TO_FEET => 1 / 12.0,
-                    LengthUnit.FEET_TO_YARD => 1 / 3.0,
-                    LengthUnit.INCH_TO_YARD => 1 / 36.0,
-                    LengthUnit.YARD_TO_INCH => 1 * 36.0,
-                    LengthUnit.YARD_TO_FEET => 1 * 3.0,
-                    LengthUnit.INCH_TO_CENTIMETER => 1 * 2.5,
-                    LengthUnit.FEET => 1.0,
-                    LengthUnit.INCH => 1.0,
+                    UnitType.FEET_TO_INCH => 1 * 12.0,
+                    UnitType.INCH_TO_FEET => 1 / 12.0,
+                    UnitType.FEET_TO_YARD => 1 / 3.0,
+                    UnitType.INCH_TO_YARD => 1 / 36.0,
+                    UnitType.YARD_TO_INCH => 1 * 36.0,
+                    UnitType.YARD_TO_FEET => 1 * 3.0,
+                    UnitType.INCH_TO_CENTIMETER => 1 * 2.5,
+                    UnitType.FEET => 1.0,
+                    UnitType.INCH => 1.0,
+                    UnitType.GALLON => 1.0,
+                    UnitType.LITRES => 1.0,
+                    UnitType.GALLON_TO_LITRES => 1 * 3.78,
+                    UnitType.LITRES_TO_GALLON => 1 / 3.78,
                     _ => 0.0,
                 };
             }

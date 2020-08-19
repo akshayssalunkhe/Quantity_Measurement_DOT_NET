@@ -13,11 +13,11 @@ namespace QuantityMeasurementProblem
         /// Method to return converrted unit value.
         /// </summary>
         /// <param name="unitValue"></param>
-        /// <param name="lengthUnit"></param>
+        /// <param name="unitType"></param>
         /// <returns>Feet value.</returns>
-        public double GetConvertUnitValue(double unitValue, Length.LengthUnit lengthUnit)
+        public double GetConvertUnitValue(double unitValue, Unit.UnitType unitType)
         {
-            return unitValue * new Length().GetValue(lengthUnit);
+            return unitValue * new Unit().GetValue(unitType);
         }
 
         /// <summary>
