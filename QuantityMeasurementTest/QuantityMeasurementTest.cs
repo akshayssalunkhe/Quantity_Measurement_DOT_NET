@@ -31,8 +31,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenZeroFeetAndZeroFeet_IfEqual_ThenShouldReturnTrue()
         {
-            double feetValueOne = this.quantityMeasurement.ReturnFeetValue(0.0);
-            double feetValueTwo = this.quantityMeasurement.ReturnFeetValue(0.0);
+            double feetValueOne = this.quantityMeasurement.ReturnUnitValue(0.0);
+            double feetValueTwo = this.quantityMeasurement.ReturnUnitValue(0.0);
             Assert.AreEqual(feetValueOne, feetValueTwo);
         }
 
@@ -42,8 +42,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenDifferentFeetValues_IfNotEqual_ThenShouldReturnTrue()
         {
-            double feetValueOne = this.quantityMeasurement.ReturnFeetValue(0.0);
-            double feetValueTwo = this.quantityMeasurement.ReturnFeetValue(1.0);
+            double feetValueOne = this.quantityMeasurement.ReturnUnitValue(0.0);
+            double feetValueTwo = this.quantityMeasurement.ReturnUnitValue(1.0);
             Assert.AreNotEqual(feetValueOne, feetValueTwo);
         }
 
@@ -84,8 +84,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void Given0InchAnd0Inch_IfEqual_ThenShouldReturnTrue()
         {
-            double inchValueOne = this.quantityMeasurement.ReturnInchValue(0.0);
-            double inchValueTwo = this.quantityMeasurement.ReturnInchValue(0.0);
+            double inchValueOne = this.quantityMeasurement.ReturnUnitValue(0.0);
+            double inchValueTwo = this.quantityMeasurement.ReturnUnitValue(0.0);
             Assert.AreEqual(inchValueOne, inchValueTwo);
         }
 
@@ -95,8 +95,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void Given0InchAnd1Inch_IfNotEqual_ThenShouldReturnTrue()
         {
-            double inchValueOne = this.quantityMeasurement.ReturnInchValue(0.0);
-            double inchValueTwo = this.quantityMeasurement.ReturnInchValue(1.0);
+            double inchValueOne = this.quantityMeasurement.ReturnUnitValue(0.0);
+            double inchValueTwo = this.quantityMeasurement.ReturnUnitValue(1.0);
             Assert.AreNotEqual(inchValueOne, inchValueTwo);
         }
 
