@@ -3,13 +3,13 @@
 /// </summary>
 namespace QuantityMeasurementProblem
     {
-        using System;
-        using System.Collections.Generic;
+    using System;
+    using System.Collections.Generic;
 
-        /// <summary>
-        /// unit class.
-        /// </summary>
-        public class Unit
+    /// <summary>
+    /// unit class.
+    /// </summary>
+    public class Unit
         {
             /// <summary>
             /// Enum For unit type.
@@ -105,13 +105,24 @@ namespace QuantityMeasurementProblem
                 /// Enum for gram to kilogram conversion.
                 /// </summary>
                 GRAM_TO_KILOGRAM,
+
+                /// <summary>
+                /// Enum for celsius unit type.
+                /// </summary>
+                CELSIUS,
+
+               /// <summary>
+               /// Enum for celsius unit type.
+               /// </summary>
+                FAHRENHEIT,
         }
 
-            /// <summary>
-            /// Function to get value of enum.
-            /// </summary>
-            /// <param name=unitType></param>
-            /// <returns> selected unit conversion</returns>
+        /// <summary>
+        /// Function to get value of enum.
+        /// </summary>
+        /// <param name=unitType>
+        /// <returns> converted value.</returns></param>
+        /// <returns> selected unit conversion</returns>
             public double GetValue(UnitType unitType)
             {
                 return unitType switch

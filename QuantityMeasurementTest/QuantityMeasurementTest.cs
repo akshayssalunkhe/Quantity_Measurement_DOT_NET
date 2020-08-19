@@ -288,5 +288,25 @@ namespace QuantityMeasurementTest
             double addition = this.quantityMeasurement.GetAddition(firstWeight, secondWeight);
             Assert.AreEqual(1001.0, addition);
         }
+
+        /// <summary>
+        /// Test method to check celcius to fahrenheit conversion.
+        /// </summary>
+        [Test]
+        public void GivenCelciusToConvertFahrenheit_ThenShouldReturnEqual()
+        {
+            double celciusValue = this.quantityMeasurement.GetConvertUnitValue(100.0, Unit.UnitType.CELSIUS);
+            Assert.AreEqual(212.0, celciusValue);
+        }
+
+        /// <summary>
+        /// Test method to check fahrenheit to celcius conversion.
+        /// </summary>
+        [Test]
+        public void GivenFahrenheitToConvertCelsius_ThenShouldReturnEqual()
+        {
+            double fahrenheitValue = this.quantityMeasurement.GetConvertUnitValue(212.0, Unit.UnitType.FAHRENHEIT);
+            Assert.AreEqual(100.0, fahrenheitValue);
+        }
     }
 }
