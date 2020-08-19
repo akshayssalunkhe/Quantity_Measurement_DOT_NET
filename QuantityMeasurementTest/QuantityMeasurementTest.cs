@@ -77,5 +77,58 @@ namespace QuantityMeasurementTest
             QuantityMeasurement secondQuantity = new QuantityMeasurement();
             Assert.AreEqual(firstQuantity, secondQuantity);
         }
+
+        /// <summary>
+        /// Test Case to check  0 Inch And 0 Inch Should Return Equal.
+        /// </summary>
+        [Test]
+        public void Given0InchAnd0Inch_IfEqual_ThenShouldReturnTrue()
+        {
+            double inchValueOne = this.quantityMeasurement.ReturnInchValue(0.0);
+            double inchValueTwo = this.quantityMeasurement.ReturnInchValue(0.0);
+            Assert.AreEqual(inchValueOne, inchValueTwo);
+        }
+
+        /// <summary>
+        /// Test Case to check Given 0 Inch And 1 Inch Should Return NotEqual.
+        /// </summary>
+        [Test]
+        public void Given0InchAnd1Inch_IfNotEqual_ThenShouldReturnTrue()
+        {
+            double inchValueOne = this.quantityMeasurement.ReturnInchValue(0.0);
+            double inchValueTwo = this.quantityMeasurement.ReturnInchValue(1.0);
+            Assert.AreNotEqual(inchValueOne, inchValueTwo);
+        }
+
+        /// <summary>
+        /// Test Case to check Given Null Values Should Return Equal.
+        /// </summary>
+        [Test]
+        public void GivenNullValueForInch_WhenChecked_ThenShouldReturnFalse()
+        {
+            bool equals = this.quantityMeasurement.Equals(null);
+            Assert.IsFalse(equals);
+        }
+
+        /// <summary>
+        /// Test Case to check references.
+        /// </summary>
+        [Test]
+        public void GivenReferenceForInch_WhenChecked_ThenShouldReturnTrue()
+        {
+            bool equals = this.quantityMeasurement.Equals(this.quantityMeasurement);
+            Assert.IsTrue(equals);
+        }
+
+        /// <summary>
+        /// Test Case to check Equal Type.
+        /// </summary>
+        [Test]
+        public void GivenTypeForInch_IfEqual_ThenShouldReturnTrue()
+        {
+            QuantityMeasurement firstQuantity = new QuantityMeasurement();
+            QuantityMeasurement secondQuantity = new QuantityMeasurement();
+            Assert.AreEqual(firstQuantity, secondQuantity);
+        }
     }
 }

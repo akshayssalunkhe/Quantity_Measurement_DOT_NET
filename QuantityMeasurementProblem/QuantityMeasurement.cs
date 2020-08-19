@@ -17,6 +17,14 @@ namespace QuantityMeasurementProblem
         public double ReturnFeetValue(double feetValue) => feetValue;
 
         /// <summary>
+        /// Method to return Inch value.
+        /// </summary>
+        /// <param name="inch"></param>
+        /// <returns></returns>
+        public double ReturnInchValue(double inch) => inch;
+
+
+        /// <summary>
         /// Overridding Equals Method.
         /// </summary>
         /// <param name="obj"></param>
