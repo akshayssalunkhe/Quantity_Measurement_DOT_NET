@@ -90,6 +90,21 @@ namespace QuantityMeasurementProblem
                /// Enum for millilitre to litre conversion.
                /// </summary>
                 MILLILITRE_TO_LITRE,
+
+                /// <summary>
+                /// Enum for kilogram to gram conversion.
+                /// </summary>
+                KILOGRAM_TO_GRAM,
+
+                /// <summary>
+                /// Enum for tonne to kilogram conversion.
+                /// </summary>
+                TONNE_TO_KILOGRAM,
+
+                /// <summary>
+                /// Enum for gram to kilogram conversion.
+                /// </summary>
+                GRAM_TO_KILOGRAM,
         }
 
             /// <summary>
@@ -116,7 +131,9 @@ namespace QuantityMeasurementProblem
                     UnitType.LITRE_TO_GALLON => 1 / 3.78,
                     UnitType.LITRE_TO_MILLILITRE => 1 * 1000.0,
                     UnitType.MILLILITRE_TO_LITRE => 1 / 1000.0,
-
+                    UnitType.KILOGRAM_TO_GRAM => 1 * 1000.0,
+                    UnitType.TONNE_TO_KILOGRAM => 1 * 1000.0,
+                    UnitType.GRAM_TO_KILOGRAM => 1 / 1000.0,
                     _ => 0.0,
                 };
             }
