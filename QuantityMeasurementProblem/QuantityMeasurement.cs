@@ -10,11 +10,15 @@ namespace QuantityMeasurementProblem
     public class QuantityMeasurement
     {
         /// <summary>
-        /// Method to return feet.
+        /// Method to return converrted unit value.
         /// </summary>
         /// <param name="unitValue"></param>
+        /// <param name="lengthUnit"></param>
         /// <returns>Feet value.</returns>
-        public double ReturnUnitValue(double unitValue) => unitValue;
+        public double GetConvertUnitValue(double unitValue, Length.LengthUnit lengthUnit)
+        {
+            return unitValue * new Length().GetValue(lengthUnit);
+        }
 
         /// <summary>
         /// Overridding Equals Method.
